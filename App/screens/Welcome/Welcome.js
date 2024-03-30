@@ -7,6 +7,8 @@ import Button from '../../components/Button'
 import LottieView from "lottie-react-native";
 import { useNavigation } from '@react-navigation/native'
 import Constants from 'expo-constants';
+import * as SecureStore from 'expo-secure-store';
+
 
 
 export default function Walkthrough() {
@@ -17,13 +19,30 @@ export default function Walkthrough() {
             const version = Constants.expoConfig.version;
             setAppVersion(version);
         } catch (error) {
-            console.error('Error fetching app version:', error);
+            
         }
     }, []);
 
     useEffect(() => {
         fetchAppVersion();
     }, [fetchAppVersion]);
+
+    
+
+    const checkToken = async () => {
+        try {
+            const token = await SecureStore.getItemAsync('token');
+            if (token) {
+                
+                navigation.navigate('Home');
+            } else {
+               
+                navigation.navigate('Login');
+            }
+        } catch (error) {
+            
+        }
+    };
 
 
     const navigation = useNavigation();
@@ -80,7 +99,7 @@ export default function Walkthrough() {
 
                         <Button
                             title="Launch MineCo"
-                            onPress={() => navigation.navigate('Welcome')}
+                            onPress={() => checkToken()}
                             style={{
                                 width: '100%',
                                 paddingVertical: 12,
