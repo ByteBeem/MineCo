@@ -68,7 +68,7 @@ export default function Login() {
     }, []);
 
     const handleSubmit = useCallback(() => {
-        // handle signup logic
+       navigation.navigate("Home");
     }, [form.email]);
 
     return (
