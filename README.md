@@ -1,24 +1,35 @@
-# MineCo
+# Welcome to MineCo
 
-Welcome to MineCo - your go-to app for solving complex mathematical problems using the power of your device's hardware!
-
-## Description
-
-MineCo is a mobile app designed to challenge users with mathematical problems of varying complexities, offering a rewarding experience for those who can solve them. With MineCo, users can deposit funds, receive mathematical problems to solve, and win rewards based on their problem-solving skills.
+MineCo is a mobile app designed to challenge users with decrypting encrypted text within a specified time frame, offering a rewarding experience for those who can successfully decrypt it.
 
 ## Features
 
-- **Problem Generation:** Receive mathematical problems tailored to your chosen difficulty level.
-- **Real-time Problem Solving:** Utilize your device's hardware to solve problems efficiently within a specified time frame.
-- **Win Rewards:** Correctly solve problems to win rewards, with higher rewards for more challenging problems.
+- **Encrypted Text Decryption:** Receive encrypted text from the server and attempt to decrypt it within a specified time limit.
+- **Real-time Decryption:** Utilize your device's hardware to decrypt text efficiently within the given time frame.
+- **Win Rewards:** Successfully decrypt text to win rewards, with higher rewards for more challenging encryption.
 - **Secure Transactions:** Deposit funds securely and withdraw winnings hassle-free.
-- **User-friendly Interface:** Enjoy a sleek and intuitive interface for seamless navigation and problem-solving.
-
+- **User-friendly Interface:** Enjoy a sleek and intuitive interface for seamless navigation and decryption.
 
 ## Usage
 
-- Sign up or log in to your MineCo account.
-- Deposit funds to start playing.
-- Receive mathematical problems and solve them within the specified time limit.
-- Win rewards based on your problem-solving skills.
-- Withdraw your winnings securely at any time.
+1. **Sign up or log in** to your MineCo account.
+2. **Deposit funds** to start playing.
+3. Receive encrypted text and **decrypt it** within the specified time limit.
+4. **Win rewards** based on your decryption skills.
+5. **Withdraw your winnings** securely at any time.
+
+## Getting Started
+
+To get started with MineCo, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Install the required dependencies.
+3. Run the app on your preferred mobile device.
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to MineCo, please fork this repository, make your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
