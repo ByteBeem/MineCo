@@ -8,11 +8,13 @@ import LottieView from "lottie-react-native";
 import { useNavigation } from '@react-navigation/native'
 import Constants from 'expo-constants';
 import * as SecureStore from 'expo-secure-store';
+import axios from 'axios';
 
 
 
 export default function Walkthrough() {
     const [appVersion, setAppVersion] = useState(null);
+    const  [error , setError] =useState('');
 
     const fetchAppVersion = useCallback(async () => {
         try {
@@ -26,6 +28,24 @@ export default function Walkthrough() {
     useEffect(() => {
         fetchAppVersion();
     }, [fetchAppVersion]);
+
+
+    const AppVerify=useCallback( async () =>{
+        try {
+            const response= await axios.get(`api/app/verify/${appVersion}`)
+            if(response.status === 200){
+                const AppToken=response.data.Apptoken;
+                 SecureStore.setItem('AppToken',AppToken)
+            } else if(response.status=== 400){
+                setError("You are using the oudated version , please update the app.");
+            }else {
+                setError("Something went wrong.");
+            }
+
+        } catch (error){
+
+        }
+    }, []);
 
     
 
